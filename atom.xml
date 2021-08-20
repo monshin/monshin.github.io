@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Monshin&#39;s Blog</title>
+  
+  
+  <link href="https://monshin.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://monshin.github.io/"/>
+  <updated>2021-08-20T17:35:25.853Z</updated>
+  <id>https://monshin.github.io/</id>
+  
+  <author>
+    <name>Monshin Hsiao</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[C#] 綠界站內付2.0 - 參數加密與解密</title>
+    <link href="https://monshin.github.io/2021/08/20/csharp-ecpay-embedded-checkout-encrypt-and-decode/"/>
+    <id>https://monshin.github.io/2021/08/20/csharp-ecpay-embedded-checkout-encrypt-and-decode/</id>
+    <published>2021-08-20T02:58:37.000Z</published>
+    <updated>2021-08-20T17:35:25.853Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;一般串接金流時，如果要傳遞資料都需要將資料進行加解密，而最近因案子需求有接觸到綠界站內付 2.0，所以在此紀錄如何用 C# 編寫綠界站內付 2.0 加解密的程式。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="C#" scheme="https://monshin.github.io/categories/C/"/>
+    
+    
+    <category term="C#" scheme="https://monshin.github.io/tags/C/"/>
+    
+    <category term="ECPay" scheme="https://monshin.github.io/tags/ECPay/"/>
+    
+    <category term="AES 加密" scheme="https://monshin.github.io/tags/AES-%E5%8A%A0%E5%AF%86/"/>
+    
+    <category term="URL encoding" scheme="https://monshin.github.io/tags/URL-encoding/"/>
+    
+    <category term="JSON" scheme="https://monshin.github.io/tags/JSON/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[JavaScript] 使用 Fetch API 來下載檔案（Download File）</title>
+    <link href="https://monshin.github.io/2021/08/12/js-file-download-using-fetch/"/>
+    <id>https://monshin.github.io/2021/08/12/js-file-download-using-fetch/</id>
+    <published>2021-08-12T02:38:29.000Z</published>
+    <updated>2021-08-17T16:40:48.464Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/2021/08/12/js-file-download-using-fetch/banner.jpg&quot; class=&quot;&quot; title=&quot;Banner&quot;&gt;
+
+&lt;p&gt;一般來說檔案要讓使用者下載很簡單，只需要在畫面上放一個超連結導向到檔案的路徑，當使用者點擊即開始下載。&lt;br&gt;然而並不是每次都那麼簡單，也是有可能會有需要藉由 API 的方式來產生並下載檔案的情況，此時只好自己寫 JavaScript 去呼叫 API 並下載檔案。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JavaScript" scheme="https://monshin.github.io/categories/JavaScript/"/>
+    
+    
+    <category term="JavaScript" scheme="https://monshin.github.io/tags/JavaScript/"/>
+    
+    <category term="Fetch API" scheme="https://monshin.github.io/tags/Fetch-API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[JavaScript] 藉由 Fetch API 與 Form Data 來上傳檔案（Uploading files）</title>
+    <link href="https://monshin.github.io/2021/08/08/js-file-upload-using-fetch/"/>
+    <id>https://monshin.github.io/2021/08/08/js-file-upload-using-fetch/</id>
+    <published>2021-08-07T16:12:10.000Z</published>
+    <updated>2021-08-17T16:40:48.466Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/2021/08/08/js-file-upload-using-fetch/banner.jpg&quot; class=&quot;&quot; title=&quot;Banner&quot;&gt;
+
+&lt;p&gt;上傳檔案是 Web 常用的應用之一，能使用的方式有相當多中，其中最常基本的方式就是將 HTML form 標籤上的編碼類型(enctype)設為 multipart/form-data，讓瀏覽器能針對檔案進行編碼。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="JavaScript" scheme="https://monshin.github.io/categories/JavaScript/"/>
+    
+    
+    <category term="JavaScript" scheme="https://monshin.github.io/tags/JavaScript/"/>
+    
+    <category term="Fetch API" scheme="https://monshin.github.io/tags/Fetch-API/"/>
+    
+  </entry>
+  
+</feed>
