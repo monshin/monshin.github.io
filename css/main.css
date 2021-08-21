@@ -2857,6 +2857,12 @@ mark.search-keyword {
     padding: 10px 12px;
   }
 }
+.site-author-name {
+  color: #4a4a4a;
+}
+.site-description {
+  color: #555;
+}
 .post-tags a,
 .post-nav-item a {
   --link-color: #999;

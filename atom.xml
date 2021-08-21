@@ -6,7 +6,7 @@
   <link href="https://monshin.github.io/atom.xml" rel="self"/>
   
   <link href="https://monshin.github.io/"/>
-  <updated>2021-08-20T17:35:25.853Z</updated>
+  <updated>2021-08-20T17:40:19.864Z</updated>
   <id>https://monshin.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://monshin.github.io/2021/08/20/csharp-ecpay-embedded-checkout-encrypt-and-decode/"/>
     <id>https://monshin.github.io/2021/08/20/csharp-ecpay-embedded-checkout-encrypt-and-decode/</id>
     <published>2021-08-20T02:58:37.000Z</published>
-    <updated>2021-08-20T17:35:25.853Z</updated>
+    <updated>2021-08-20T17:40:19.864Z</updated>
     
     
     <summary type="html">&lt;p&gt;一般串接金流時，如果要傳遞資料都需要將資料進行加解密，而最近因案子需求有接觸到綠界站內付 2.0，所以在此紀錄如何用 C# 編寫綠界站內付 2.0 加解密的程式。&lt;/p&gt;</summary>

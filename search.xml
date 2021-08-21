@@ -1,30 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>[JavaScript] 使用 Fetch API 來下載檔案（Download File）</title>
-    <url>/2021/08/12/js-file-download-using-fetch/</url>
-    <content><![CDATA[<img src="/2021/08/12/js-file-download-using-fetch/banner.jpg" class="" title="Banner">
-
-<p>一般來說檔案要讓使用者下載很簡單，只需要在畫面上放一個超連結導向到檔案的路徑，當使用者點擊即開始下載。<br>然而並不是每次都那麼簡單，也是有可能會有需要藉由 API 的方式來產生並下載檔案的情況，此時只好自己寫 JavaScript 去呼叫 API 並下載檔案。</p>
-<span id="more"></span>
-
-<h2 id="範例程式碼"><a href="#範例程式碼" class="headerlink" title="範例程式碼"></a>範例程式碼</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Download file</span></span><br><span class="line">fetch(<span class="string">&#x27;Your api or file url&#x27;</span>, &#123;</span><br><span class="line">  <span class="attr">method</span>: <span class="string">&#x27;GET&#x27;</span>,</span><br><span class="line">  <span class="comment">// 其他設定或是需要傳遞的資料</span></span><br><span class="line">&#125;)</span><br><span class="line">  .then(<span class="function"><span class="params">response</span> =&gt;</span> response.blob())</span><br><span class="line">  .then(<span class="function"><span class="params">blob</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> url = <span class="built_in">window</span>.URL.createObjectURL(blob); <span class="comment">// create url from blob</span></span><br><span class="line">    <span class="keyword">var</span> fileLink = <span class="built_in">document</span>.createElement(<span class="string">&#x27;a&#x27;</span>); <span class="comment">// create link for file</span></span><br><span class="line">    fileLink.href = url;</span><br><span class="line">    fileLink.download = <span class="string">&#x27;output.csv&#x27;</span>; <span class="comment">// download filename</span></span><br><span class="line">    <span class="built_in">document</span>.body.appendChild(fileLink); <span class="comment">// append file link to download</span></span><br><span class="line">    fileLink.click();</span><br><span class="line">    fileLink.remove(); <span class="comment">// remove file link after click</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function"><span class="params">error</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// Handle error here.</span></span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
-
-<p>其主要概念就是取得檔案 Blob 並轉換成 URL，最後藉由 HTML 的超連結標籤（&lt;a&gt;）來模擬下載檔案。</p>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ul>
-<li><a href="https://medium.com/@NorthBei/js%E7%AD%86%E8%A8%98-js-download-file-programmatically-padding-zero-4bf23a7e5cff">[JS 筆記]Js download file programmatically &amp; padding zero | Medium</a></li>
-<li><a href="https://scarletsky.github.io/2016/07/03/download-file-using-javascript/">如何用 JavaScript 下载文件 - scarletsky</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>JavaScript</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
-        <tag>Fetch API</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[C#] 綠界站內付2.0 - 參數加密與解密</title>
     <url>/2021/08/20/csharp-ecpay-embedded-checkout-encrypt-and-decode/</url>
     <content><![CDATA[<p>一般串接金流時，如果要傳遞資料都需要將資料進行加解密，而最近因案子需求有接觸到綠界站內付 2.0，所以在此紀錄如何用 C# 編寫綠界站內付 2.0 加解密的程式。</p>
@@ -92,6 +68,30 @@
         <tag>AES 加密</tag>
         <tag>URL encoding</tag>
         <tag>JSON</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[JavaScript] 使用 Fetch API 來下載檔案（Download File）</title>
+    <url>/2021/08/12/js-file-download-using-fetch/</url>
+    <content><![CDATA[<img src="/2021/08/12/js-file-download-using-fetch/banner.jpg" class="" title="Banner">
+
+<p>一般來說檔案要讓使用者下載很簡單，只需要在畫面上放一個超連結導向到檔案的路徑，當使用者點擊即開始下載。<br>然而並不是每次都那麼簡單，也是有可能會有需要藉由 API 的方式來產生並下載檔案的情況，此時只好自己寫 JavaScript 去呼叫 API 並下載檔案。</p>
+<span id="more"></span>
+
+<h2 id="範例程式碼"><a href="#範例程式碼" class="headerlink" title="範例程式碼"></a>範例程式碼</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Download file</span></span><br><span class="line">fetch(<span class="string">&#x27;Your api or file url&#x27;</span>, &#123;</span><br><span class="line">  <span class="attr">method</span>: <span class="string">&#x27;GET&#x27;</span>,</span><br><span class="line">  <span class="comment">// 其他設定或是需要傳遞的資料</span></span><br><span class="line">&#125;)</span><br><span class="line">  .then(<span class="function"><span class="params">response</span> =&gt;</span> response.blob())</span><br><span class="line">  .then(<span class="function"><span class="params">blob</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> url = <span class="built_in">window</span>.URL.createObjectURL(blob); <span class="comment">// create url from blob</span></span><br><span class="line">    <span class="keyword">var</span> fileLink = <span class="built_in">document</span>.createElement(<span class="string">&#x27;a&#x27;</span>); <span class="comment">// create link for file</span></span><br><span class="line">    fileLink.href = url;</span><br><span class="line">    fileLink.download = <span class="string">&#x27;output.csv&#x27;</span>; <span class="comment">// download filename</span></span><br><span class="line">    <span class="built_in">document</span>.body.appendChild(fileLink); <span class="comment">// append file link to download</span></span><br><span class="line">    fileLink.click();</span><br><span class="line">    fileLink.remove(); <span class="comment">// remove file link after click</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function"><span class="params">error</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// Handle error here.</span></span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+<p>其主要概念就是取得檔案 Blob 並轉換成 URL，最後藉由 HTML 的超連結標籤（&lt;a&gt;）來模擬下載檔案。</p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ul>
+<li><a href="https://medium.com/@NorthBei/js%E7%AD%86%E8%A8%98-js-download-file-programmatically-padding-zero-4bf23a7e5cff">[JS 筆記]Js download file programmatically &amp; padding zero | Medium</a></li>
+<li><a href="https://scarletsky.github.io/2016/07/03/download-file-using-javascript/">如何用 JavaScript 下载文件 - scarletsky</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>JavaScript</tag>
+        <tag>Fetch API</tag>
       </tags>
   </entry>
   <entry>
