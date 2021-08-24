@@ -1,0 +1,4 @@
+# hexo robots.txt
+User-agent: *
+
+Sitemap: https://monshin.github.io/sitemap.xml
