@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Monshin&#39;s Blog</title>
-  
+  <icon>https://monshin.github.io/images/apple-touch-icon-next.png</icon>
   
   <link href="https://monshin.github.io/atom.xml" rel="self"/>
   
