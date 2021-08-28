@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Monshin&#39;s Blog</title>
-  
+  <icon>https://monshin.github.io/images/apple-touch-icon-next.png</icon>
   
   <link href="https://monshin.github.io/atom.xml" rel="self"/>
   
   <link href="https://monshin.github.io/"/>
-  <updated>2021-08-20T17:40:19.864Z</updated>
+  <updated>2021-08-28T17:07:22.530Z</updated>
   <id>https://monshin.github.io/</id>
   
   <author>
@@ -17,11 +17,61 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>[CSS] 解決 iOS Safari 字體大小（font-size）設定無效的問題 — -webkit-text-size-adjust</title>
+    <link href="https://monshin.github.io/202108/css/-webkit-text-size-adjust/"/>
+    <id>https://monshin.github.io/202108/css/-webkit-text-size-adjust/</id>
+    <published>2021-08-28T16:50:16.000Z</published>
+    <updated>2021-08-28T17:07:22.530Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/202108/css/-webkit-text-size-adjust/banner.jpg&quot; class=&quot;&quot; title=&quot;Banner&quot;&gt;
+
+&lt;p&gt;在撰寫網站時，可能會發現在 Mobile Safari 的文字會被放大的問題，其原因是在行動裝置的瀏覽器有自動調整字體大小的問題。</summary>
+    
+    
+    
+    <category term="CSS" scheme="https://monshin.github.io/categories/CSS/"/>
+    
+    
+    <category term="CSS" scheme="https://monshin.github.io/tags/CSS/"/>
+    
+    <category term="Safari" scheme="https://monshin.github.io/tags/Safari/"/>
+    
+    <category term="Mobile Web" scheme="https://monshin.github.io/tags/Mobile-Web/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[CSS] 解決 iOS Safari 使用捲軸（Scroll）覺得卡卡的問題 — -webkit-overflow-scrolling</title>
+    <link href="https://monshin.github.io/202108/css/-webkit-overflow-scrolling/"/>
+    <id>https://monshin.github.io/202108/css/-webkit-overflow-scrolling/</id>
+    <published>2021-08-24T02:37:58.000Z</published>
+    <updated>2021-08-28T17:07:22.530Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/202108/css/-webkit-overflow-scrolling/banner.jpg&quot; class=&quot;&quot; title=&quot;Banner&quot;&gt;
+
+&lt;p&gt;在 Mobile Safari 上使用捲軸（Scroll）時，可能會覺得在操作上卡卡的，這時可以藉由 CSS 上的 &lt;code&gt;-webkit-overflow-scrolling&lt;/code&gt; 屬性，來控制 Mobile Safari 上的捲動效果。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="CSS" scheme="https://monshin.github.io/categories/CSS/"/>
+    
+    
+    <category term="CSS" scheme="https://monshin.github.io/tags/CSS/"/>
+    
+    <category term="Safari" scheme="https://monshin.github.io/tags/Safari/"/>
+    
+    <category term="Mobile Web" scheme="https://monshin.github.io/tags/Mobile-Web/"/>
+    
+  </entry>
+  
+  <entry>
     <title>[C#] 綠界站內付2.0 - 參數加密與解密</title>
-    <link href="https://monshin.github.io/2021/08/20/csharp-ecpay-embedded-checkout-encrypt-and-decode/"/>
-    <id>https://monshin.github.io/2021/08/20/csharp-ecpay-embedded-checkout-encrypt-and-decode/</id>
+    <link href="https://monshin.github.io/202108/csharp/ecpay-embedded-checkout-encrypt-and-decode/"/>
+    <id>https://monshin.github.io/202108/csharp/ecpay-embedded-checkout-encrypt-and-decode/</id>
     <published>2021-08-20T02:58:37.000Z</published>
-    <updated>2021-08-20T17:40:19.864Z</updated>
+    <updated>2021-08-24T16:38:52.327Z</updated>
     
     
     <summary type="html">&lt;p&gt;一般串接金流時，如果要傳遞資料都需要將資料進行加解密，而最近因案子需求有接觸到綠界站內付 2.0，所以在此紀錄如何用 C# 編寫綠界站內付 2.0 加解密的程式。&lt;/p&gt;</summary>
@@ -45,13 +95,13 @@
   
   <entry>
     <title>[JavaScript] 使用 Fetch API 來下載檔案（Download File）</title>
-    <link href="https://monshin.github.io/2021/08/12/js-file-download-using-fetch/"/>
-    <id>https://monshin.github.io/2021/08/12/js-file-download-using-fetch/</id>
+    <link href="https://monshin.github.io/202108/js/file-download-using-fetch/"/>
+    <id>https://monshin.github.io/202108/js/file-download-using-fetch/</id>
     <published>2021-08-12T02:38:29.000Z</published>
-    <updated>2021-08-17T16:40:48.464Z</updated>
+    <updated>2021-08-24T16:38:52.337Z</updated>
     
     
-    <summary type="html">&lt;img src=&quot;/2021/08/12/js-file-download-using-fetch/banner.jpg&quot; class=&quot;&quot; title=&quot;Banner&quot;&gt;
+    <summary type="html">&lt;img src=&quot;/202108/js/file-download-using-fetch/banner.jpg&quot; class=&quot;&quot; title=&quot;Banner&quot;&gt;
 
 &lt;p&gt;一般來說檔案要讓使用者下載很簡單，只需要在畫面上放一個超連結導向到檔案的路徑，當使用者點擊即開始下載。&lt;br&gt;然而並不是每次都那麼簡單，也是有可能會有需要藉由 API 的方式來產生並下載檔案的情況，此時只好自己寫 JavaScript 去呼叫 API 並下載檔案。&lt;/p&gt;</summary>
     
@@ -68,13 +118,13 @@
   
   <entry>
     <title>[JavaScript] 藉由 Fetch API 與 Form Data 來上傳檔案（Uploading files）</title>
-    <link href="https://monshin.github.io/2021/08/08/js-file-upload-using-fetch/"/>
-    <id>https://monshin.github.io/2021/08/08/js-file-upload-using-fetch/</id>
+    <link href="https://monshin.github.io/202108/js/file-upload-using-fetch/"/>
+    <id>https://monshin.github.io/202108/js/file-upload-using-fetch/</id>
     <published>2021-08-07T16:12:10.000Z</published>
-    <updated>2021-08-17T16:40:48.466Z</updated>
+    <updated>2021-08-24T16:38:52.340Z</updated>
     
     
-    <summary type="html">&lt;img src=&quot;/2021/08/08/js-file-upload-using-fetch/banner.jpg&quot; class=&quot;&quot; title=&quot;Banner&quot;&gt;
+    <summary type="html">&lt;img src=&quot;/202108/js/file-upload-using-fetch/banner.jpg&quot; class=&quot;&quot; title=&quot;Banner&quot;&gt;
 
 &lt;p&gt;上傳檔案是 Web 常用的應用之一，能使用的方式有相當多中，其中最常基本的方式就是將 HTML form 標籤上的編碼類型(enctype)設為 multipart/form-data，讓瀏覽器能針對檔案進行編碼。&lt;/p&gt;</summary>
     

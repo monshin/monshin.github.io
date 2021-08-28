@@ -7,9 +7,9 @@
 <meta name="generator" content="Hexo 5.4.0">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
@@ -19,30 +19,30 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"monshin.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"monshin.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":12,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 <meta name="description" content="上傳檔案是 Web 常用的應用之一，能使用的方式有相當多中，其中最常基本的方式就是將 HTML form 標籤上的編碼類型(enctype)設為 multipart&#x2F;form-data，讓瀏覽器能針對檔案進行編碼。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[JavaScript] 藉由 Fetch API 與 Form Data 來上傳檔案（Uploading files）">
-<meta property="og:url" content="https://monshin.github.io/2021/08/08/js-file-upload-using-fetch/index.html">
+<meta property="og:url" content="https://monshin.github.io/202108/js/file-upload-using-fetch/index.html">
 <meta property="og:site_name" content="Monshin&#39;s Blog">
 <meta property="og:description" content="上傳檔案是 Web 常用的應用之一，能使用的方式有相當多中，其中最常基本的方式就是將 HTML form 標籤上的編碼類型(enctype)設為 multipart&#x2F;form-data，讓瀏覽器能針對檔案進行編碼。">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://monshin.github.io/2021/08/08/js-file-upload-using-fetch/banner.jpg">
-<meta property="og:image" content="https://monshin.github.io/2021/08/08/js-file-upload-using-fetch/chrome-upload-file.png">
+<meta property="og:image" content="https://monshin.github.io/202108/js/file-upload-using-fetch/banner.jpg">
+<meta property="og:image" content="https://monshin.github.io/202108/js/file-upload-using-fetch/chrome-upload-file.png">
 <meta property="article:published_time" content="2021-08-07T16:12:10.000Z">
-<meta property="article:modified_time" content="2021-08-17T16:40:48.466Z">
+<meta property="article:modified_time" content="2021-08-24T16:38:52.340Z">
 <meta property="article:author" content="Monshin Hsiao">
 <meta property="article:tag" content="JavaScript">
 <meta property="article:tag" content="Fetch API">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://monshin.github.io/2021/08/08/js-file-upload-using-fetch/banner.jpg">
+<meta name="twitter:image" content="https://monshin.github.io/202108/js/file-upload-using-fetch/banner.jpg">
 
 
-<link rel="canonical" href="https://monshin.github.io/2021/08/08/js-file-upload-using-fetch/">
+<link rel="canonical" href="https://monshin.github.io/202108/js/file-upload-using-fetch/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://monshin.github.io/2021/08/08/js-file-upload-using-fetch/","path":"2021/08/08/js-file-upload-using-fetch/","title":"[JavaScript] 藉由 Fetch API 與 Form Data 來上傳檔案（Uploading files）"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://monshin.github.io/202108/js/file-upload-using-fetch/","path":"202108/js/file-upload-using-fetch/","title":"[JavaScript] 藉由 Fetch API 與 Form Data 來上傳檔案（Uploading files）"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>[JavaScript] 藉由 Fetch API 與 Form Data 來上傳檔案（Uploading files） | Monshin's Blog</title>
@@ -164,24 +164,25 @@
     <img class="site-author-image" itemprop="image" alt="Monshin Hsiao"
       src="/images/monshin-avatar.jpeg">
   <p class="site-author-name" itemprop="name">Monshin Hsiao</p>
-  <div class="site-description" itemprop="description">時間不在於你擁有多少，只在於你怎樣使用。</div>
+  <div class="site-description" itemprop="description">Web Developer <br /> 時間不在於你擁有多少，只在於你怎樣使用。
+</div>
 </div>
 <div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -232,12 +233,13 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://monshin.github.io/2021/08/08/js-file-upload-using-fetch/">
+    <link itemprop="mainEntityOfPage" href="https://monshin.github.io/202108/js/file-upload-using-fetch/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/monshin-avatar.jpeg">
       <meta itemprop="name" content="Monshin Hsiao">
-      <meta itemprop="description" content="時間不在於你擁有多少，只在於你怎樣使用。">
+      <meta itemprop="description" content="Web Developer <br /> 時間不在於你擁有多少，只在於你怎樣使用。
+">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -263,7 +265,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-08-18 00:40:48" itemprop="dateModified" datetime="2021-08-18T00:40:48+08:00">2021-08-18</time>
+        <time title="修改時間：2021-08-25 00:38:52" itemprop="dateModified" datetime="2021-08-25T00:38:52+08:00">2021-08-25</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -291,8 +293,8 @@
       </span>
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2021/08/08/js-file-upload-using-fetch/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/08/08/js-file-upload-using-fetch/" itemprop="commentCount"></span>
+    <a title="disqus" href="/202108/js/file-upload-using-fetch/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="202108/js/file-upload-using-fetch/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -306,7 +308,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <img src="/2021/08/08/js-file-upload-using-fetch/banner.jpg" class="" title="Banner">
+        <img src="/202108/js/file-upload-using-fetch/banner.jpg" class="" title="Banner">
 
 <p>上傳檔案是 Web 常用的應用之一，能使用的方式有相當多中，其中最常基本的方式就是將 HTML form 標籤上的編碼類型(enctype)設為 multipart/form-data，讓瀏覽器能針對檔案進行編碼。</p>
 <span id="more"></span>
@@ -315,7 +317,7 @@
 <h2 id="範例程式碼"><a href="#範例程式碼" class="headerlink" title="範例程式碼"></a>範例程式碼</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Upload file</span></span><br><span class="line"><span class="comment">// 先取得使用者上傳的檔案</span></span><br><span class="line"><span class="comment">// ex. var selectedFile = document.getElementById(&#x27;file&#x27;).files[0];</span></span><br><span class="line"><span class="keyword">var</span> formData = <span class="keyword">new</span> FormData();</span><br><span class="line">formData.append(<span class="string">&#x27;file&#x27;</span>, file); <span class="comment">// 設定上傳的檔案</span></span><br><span class="line">formData.append(<span class="string">&#x27;id&#x27;</span>, <span class="string">&#x27;aa01&#x27;</span>); <span class="comment">// 可以一起設定其他需要傳送的資料</span></span><br><span class="line"></span><br><span class="line">fetch(<span class="string">&#x27;你的 API 網址&#x27;</span>, &#123;</span><br><span class="line">  <span class="attr">method</span>: <span class="string">&#x27;POST&#x27;</span>,</span><br><span class="line">  <span class="attr">body</span>: formData,</span><br><span class="line">  <span class="comment">// Other setting you need</span></span><br><span class="line">  <span class="comment">// 不需要設定 &#x27;Content-Type&#x27;: &#x27;multipart/form-data&#x27; ，已經用 FormData 物件作為請求內容了</span></span><br><span class="line">&#125;)</span><br><span class="line">  .then(<span class="function">(<span class="params">response</span>) =&gt;</span> response.json())</span><br><span class="line">  .then(<span class="function">(<span class="params">json</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// Handle get result here.</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function">(<span class="params">error</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// Handle error here.</span></span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
 
 <p>在 Chrome 的開發人員工具裡，查看此檔案上傳的內容，其顯示內容如下圖：</p>
-<img src="/2021/08/08/js-file-upload-using-fetch/chrome-upload-file.png" class="" title="Chrome 預覽">
+<img src="/202108/js/file-upload-using-fetch/chrome-upload-file.png" class="" title="Chrome 預覽">
 <p>可以發現資料採用 Form Data 格式，而檔案轉 Binary 傳送給 API 了。</p>
 <h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://muffinman.io/uploading-files-using-fetch-multipart-form-data">Uploading files using ‘fetch’ and ‘FormData’ · Muffin Man</a></li>
@@ -327,14 +329,23 @@
     
     
 
-    <footer class="post-footer"><script type="text/javascript">
-cv_ad_options = {
-  ad_slot_id: "a1e9b33cbc45621f478c1fea6f4f83ee",
-  ad_width: "728",
-  ad_height: "90",
-  mode: "production"
-};
-</script><script text="text/javascript" src="//cdn.adotone.com/adslots/va.ads.js"></script>
+    <footer class="post-footer">
+  <div>
+    <script type="text/javascript">
+      document.write(
+        "<iframe scrolling='no' frameborder='0' sandbox='allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-storage-access-by-user-activation' style='height: 212px; width: 100%;' src='https://button.like.co/in/embed/tuc930908/button?referrer=" +
+        encodeURIComponent(location.href.split("?")[0].split("#")[0]) + "'></iframe>");
+    </script>
+  </div>
+<script type="text/javascript">
+  cv_ad_options = {
+    ad_slot_id: "a1e9b33cbc45621f478c1fea6f4f83ee",
+    ad_width: "728",
+    ad_height: "90",
+    mode: "production"
+  };
+</script>
+<script text="text/javascript" src="//cdn.adotone.com/adslots/va.ads.js"></script>
           <div class="post-tags">
               <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
               <a href="/tags/Fetch-API/" rel="tag"># Fetch API</a>
@@ -346,7 +357,7 @@ cv_ad_options = {
             <div class="post-nav-item">
             </div>
             <div class="post-nav-item">
-                <a href="/2021/08/12/js-file-download-using-fetch/" rel="next" title="[JavaScript] 使用 Fetch API 來下載檔案（Download File）">
+                <a href="/202108/js/file-download-using-fetch/" rel="next" title="[JavaScript] 使用 Fetch API 來下載檔案（Download File）">
                   [JavaScript] 使用 Fetch API 來下載檔案（Download File） <i class="fa fa-chevron-right"></i>
                 </a>
             </div>

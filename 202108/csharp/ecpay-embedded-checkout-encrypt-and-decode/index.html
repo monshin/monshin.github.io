@@ -7,9 +7,9 @@
 <meta name="generator" content="Hexo 5.4.0">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
@@ -19,18 +19,18 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"monshin.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"monshin.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":12,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 <meta name="description" content="一般串接金流時，如果要傳遞資料都需要將資料進行加解密，而最近因案子需求有接觸到綠界站內付 2.0，所以在此紀錄如何用 C# 編寫綠界站內付 2.0 加解密的程式。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[C#] 綠界站內付2.0 - 參數加密與解密">
-<meta property="og:url" content="https://monshin.github.io/2021/08/20/csharp-ecpay-embedded-checkout-encrypt-and-decode/index.html">
+<meta property="og:url" content="https://monshin.github.io/202108/csharp/ecpay-embedded-checkout-encrypt-and-decode/index.html">
 <meta property="og:site_name" content="Monshin&#39;s Blog">
 <meta property="og:description" content="一般串接金流時，如果要傳遞資料都需要將資料進行加解密，而最近因案子需求有接觸到綠界站內付 2.0，所以在此紀錄如何用 C# 編寫綠界站內付 2.0 加解密的程式。">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://monshin.github.io/2021/08/20/csharp-ecpay-embedded-checkout-encrypt-and-decode/Schematic.png">
-<meta property="og:image" content="https://monshin.github.io/2021/08/20/csharp-ecpay-embedded-checkout-encrypt-and-decode/Encryption.png">
+<meta property="og:image" content="https://monshin.github.io/202108/csharp/ecpay-embedded-checkout-encrypt-and-decode/Schematic.png">
+<meta property="og:image" content="https://monshin.github.io/202108/csharp/ecpay-embedded-checkout-encrypt-and-decode/Encryption.png">
 <meta property="article:published_time" content="2021-08-20T02:58:37.000Z">
-<meta property="article:modified_time" content="2021-08-20T17:40:19.864Z">
+<meta property="article:modified_time" content="2021-08-24T16:38:52.327Z">
 <meta property="article:author" content="Monshin Hsiao">
 <meta property="article:tag" content="C#">
 <meta property="article:tag" content="ECPay">
@@ -38,14 +38,14 @@
 <meta property="article:tag" content="URL encoding">
 <meta property="article:tag" content="JSON">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://monshin.github.io/2021/08/20/csharp-ecpay-embedded-checkout-encrypt-and-decode/Schematic.png">
+<meta name="twitter:image" content="https://monshin.github.io/202108/csharp/ecpay-embedded-checkout-encrypt-and-decode/Schematic.png">
 
 
-<link rel="canonical" href="https://monshin.github.io/2021/08/20/csharp-ecpay-embedded-checkout-encrypt-and-decode/">
+<link rel="canonical" href="https://monshin.github.io/202108/csharp/ecpay-embedded-checkout-encrypt-and-decode/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://monshin.github.io/2021/08/20/csharp-ecpay-embedded-checkout-encrypt-and-decode/","path":"2021/08/20/csharp-ecpay-embedded-checkout-encrypt-and-decode/","title":"[C#] 綠界站內付2.0 - 參數加密與解密"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://monshin.github.io/202108/csharp/ecpay-embedded-checkout-encrypt-and-decode/","path":"202108/csharp/ecpay-embedded-checkout-encrypt-and-decode/","title":"[C#] 綠界站內付2.0 - 參數加密與解密"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>[C#] 綠界站內付2.0 - 參數加密與解密 | Monshin's Blog</title>
@@ -167,24 +167,25 @@
     <img class="site-author-image" itemprop="image" alt="Monshin Hsiao"
       src="/images/monshin-avatar.jpeg">
   <p class="site-author-name" itemprop="name">Monshin Hsiao</p>
-  <div class="site-description" itemprop="description">時間不在於你擁有多少，只在於你怎樣使用。</div>
+  <div class="site-description" itemprop="description">Web Developer <br /> 時間不在於你擁有多少，只在於你怎樣使用。
+</div>
 </div>
 <div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -235,12 +236,13 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://monshin.github.io/2021/08/20/csharp-ecpay-embedded-checkout-encrypt-and-decode/">
+    <link itemprop="mainEntityOfPage" href="https://monshin.github.io/202108/csharp/ecpay-embedded-checkout-encrypt-and-decode/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/monshin-avatar.jpeg">
       <meta itemprop="name" content="Monshin Hsiao">
-      <meta itemprop="description" content="時間不在於你擁有多少，只在於你怎樣使用。">
+      <meta itemprop="description" content="Web Developer <br /> 時間不在於你擁有多少，只在於你怎樣使用。
+">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -266,7 +268,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-08-21 01:40:19" itemprop="dateModified" datetime="2021-08-21T01:40:19+08:00">2021-08-21</time>
+        <time title="修改時間：2021-08-25 00:38:52" itemprop="dateModified" datetime="2021-08-25T00:38:52+08:00">2021-08-25</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -294,8 +296,8 @@
       </span>
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2021/08/20/csharp-ecpay-embedded-checkout-encrypt-and-decode/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2021/08/20/csharp-ecpay-embedded-checkout-encrypt-and-decode/" itemprop="commentCount"></span>
+    <a title="disqus" href="/202108/csharp/ecpay-embedded-checkout-encrypt-and-decode/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="202108/csharp/ecpay-embedded-checkout-encrypt-and-decode/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -313,10 +315,10 @@
 <span id="more"></span>
 
 <h2 id="綠界站內付-2-0"><a href="#綠界站內付-2-0" class="headerlink" title="綠界站內付 2.0"></a>綠界站內付 2.0</h2><p>「站內付 2.0」是綠界在今年（2021）年初推出的全新廠商付款串接規格，付款頁面改用嵌入式以減少跳轉畫面（如下圖），提供流暢的交易體驗，詳情可看綠界的<a target="_blank" rel="noopener" href="https://www.ecpay.com.tw/Activities/inpay2">官網服務介紹</a>。</p>
-<img src="/2021/08/20/csharp-ecpay-embedded-checkout-encrypt-and-decode/Schematic.png" class="" title="站內付2.0 示意圖">
+<img src="/202108/csharp/ecpay-embedded-checkout-encrypt-and-decode/Schematic.png" class="" title="站內付2.0 示意圖">
 
 <h3 id="資料如何加解密？"><a href="#資料如何加解密？" class="headerlink" title="資料如何加解密？"></a>資料如何加解密？</h3><p>站內付 2.0 的介接方式可以去官網的「<a target="_blank" rel="noopener" href="https://www.ecpay.com.tw/Service/API_Dwnld">串接規格下載</a>」，下載相關的技術文件。根據文件上的說明（如下圖）可知道須透過 JSON 格式編碼、URL 編碼及 AES 加密演算法，這 3 個階段來進行參數加解密。</p>
-<img src="/2021/08/20/csharp-ecpay-embedded-checkout-encrypt-and-decode/Encryption.png" class="" title="站內付2.0 參數加密方式">
+<img src="/202108/csharp/ecpay-embedded-checkout-encrypt-and-decode/Encryption.png" class="" title="站內付2.0 參數加密方式">
 
 <p>以下將先個別介紹 3 個階段該如何處理，而於最後整合在一起。</p>
 <h2 id="AES-加密演算法"><a href="#AES-加密演算法" class="headerlink" title="AES 加密演算法"></a>AES 加密演算法</h2><p>AES（Advanced Encryption Standard）又稱 Rijndael 加密法，是對稱金鑰加密中流行的演算法之一。</p>
@@ -371,14 +373,23 @@
     
     
 
-    <footer class="post-footer"><script type="text/javascript">
-cv_ad_options = {
-  ad_slot_id: "a1e9b33cbc45621f478c1fea6f4f83ee",
-  ad_width: "728",
-  ad_height: "90",
-  mode: "production"
-};
-</script><script text="text/javascript" src="//cdn.adotone.com/adslots/va.ads.js"></script>
+    <footer class="post-footer">
+  <div>
+    <script type="text/javascript">
+      document.write(
+        "<iframe scrolling='no' frameborder='0' sandbox='allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-storage-access-by-user-activation' style='height: 212px; width: 100%;' src='https://button.like.co/in/embed/tuc930908/button?referrer=" +
+        encodeURIComponent(location.href.split("?")[0].split("#")[0]) + "'></iframe>");
+    </script>
+  </div>
+<script type="text/javascript">
+  cv_ad_options = {
+    ad_slot_id: "a1e9b33cbc45621f478c1fea6f4f83ee",
+    ad_width: "728",
+    ad_height: "90",
+    mode: "production"
+  };
+</script>
+<script text="text/javascript" src="//cdn.adotone.com/adslots/va.ads.js"></script>
           <div class="post-tags">
               <a href="/tags/C/" rel="tag"># C#</a>
               <a href="/tags/ECPay/" rel="tag"># ECPay</a>
@@ -391,11 +402,14 @@ cv_ad_options = {
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/08/12/js-file-download-using-fetch/" rel="prev" title="[JavaScript] 使用 Fetch API 來下載檔案（Download File）">
+                <a href="/202108/js/file-download-using-fetch/" rel="prev" title="[JavaScript] 使用 Fetch API 來下載檔案（Download File）">
                   <i class="fa fa-chevron-left"></i> [JavaScript] 使用 Fetch API 來下載檔案（Download File）
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/202108/css/-webkit-overflow-scrolling/" rel="next" title="[CSS] 解決 iOS Safari 使用捲軸（Scroll）覺得卡卡的問題 — -webkit-overflow-scrolling">
+                  [CSS] 解決 iOS Safari 使用捲軸（Scroll）覺得卡卡的問題 — -webkit-overflow-scrolling <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
     </footer>
