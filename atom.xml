@@ -6,7 +6,7 @@
   <link href="https://monshin.github.io/atom.xml" rel="self"/>
   
   <link href="https://monshin.github.io/"/>
-  <updated>2021-08-30T02:58:33.538Z</updated>
+  <updated>2021-09-03T02:46:03.802Z</updated>
   <id>https://monshin.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[CSS] 解決 Safari 使用 border-radius 搭配 overflow: hidden 沒有圓角效果的問題</title>
+    <link href="https://monshin.github.io/202109/css/safari-border-radius-overflow-hidden/"/>
+    <id>https://monshin.github.io/202109/css/safari-border-radius-overflow-hidden/</id>
+    <published>2021-09-03T02:39:29.000Z</published>
+    <updated>2021-09-03T02:46:03.802Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/202109/css/safari-border-radius-overflow-hidden/banner.jpg&quot; class=&quot;&quot; title=&quot;Banner&quot;&gt;
+
+&lt;p&gt;最近在撰寫網站時，發現在 Safari 上使用 border-radius 搭配 overflow: hidden 沒有圓角效果，這其實是 Safari 在呈現計算上的錯誤 [&lt;a href=&quot;https://bugs.webkit.org/show_bug.cgi?id=140535&quot;&gt;Bug&lt;/a&gt;]，可以藉由設定遮罩讓其重新計算。</summary>
+    
+    
+    
+    <category term="CSS" scheme="https://monshin.github.io/categories/CSS/"/>
+    
+    
+    <category term="CSS" scheme="https://monshin.github.io/tags/CSS/"/>
+    
+    <category term="Safari" scheme="https://monshin.github.io/tags/Safari/"/>
+    
+  </entry>
   
   <entry>
     <title>[JavaScript] ES6 Array 移除重複(Distinct)</title>
