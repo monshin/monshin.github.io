@@ -6,7 +6,7 @@
   <link href="https://monshin.github.io/atom.xml" rel="self"/>
   
   <link href="https://monshin.github.io/"/>
-  <updated>2021-09-03T02:46:03.802Z</updated>
+  <updated>2021-09-07T02:16:05.202Z</updated>
   <id>https://monshin.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://monshin.github.io/202109/css/safari-border-radius-overflow-hidden/"/>
     <id>https://monshin.github.io/202109/css/safari-border-radius-overflow-hidden/</id>
     <published>2021-09-03T02:39:29.000Z</published>
-    <updated>2021-09-03T02:46:03.802Z</updated>
+    <updated>2021-09-07T02:16:05.202Z</updated>
     
     
     <summary type="html">&lt;img src=&quot;/202109/css/safari-border-radius-overflow-hidden/banner.jpg&quot; class=&quot;&quot; title=&quot;Banner&quot;&gt;
@@ -30,7 +30,9 @@
     
     
     
-    <category term="CSS" scheme="https://monshin.github.io/categories/CSS/"/>
+    <category term="程式設計" scheme="https://monshin.github.io/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/"/>
+    
+    <category term="CSS" scheme="https://monshin.github.io/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/CSS/"/>
     
     
     <category term="CSS" scheme="https://monshin.github.io/tags/CSS/"/>
@@ -44,7 +46,7 @@
     <link href="https://monshin.github.io/202108/js/es6-array-remove-distinct/"/>
     <id>https://monshin.github.io/202108/js/es6-array-remove-distinct/</id>
     <published>2021-08-30T02:43:56.000Z</published>
-    <updated>2021-08-30T02:58:33.538Z</updated>
+    <updated>2021-09-07T02:15:21.676Z</updated>
     
     
     <summary type="html">&lt;img src=&quot;/202108/js/es6-array-remove-distinct/banner.jpg&quot; class=&quot;&quot; title=&quot;Banner&quot;&gt;
@@ -53,7 +55,9 @@
     
     
     
-    <category term="JavaScript" scheme="https://monshin.github.io/categories/JavaScript/"/>
+    <category term="程式設計" scheme="https://monshin.github.io/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/"/>
+    
+    <category term="JavaScript" scheme="https://monshin.github.io/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/JavaScript/"/>
     
     
     <category term="JavaScript" scheme="https://monshin.github.io/tags/JavaScript/"/>
@@ -65,7 +69,7 @@
     <link href="https://monshin.github.io/202108/css/-webkit-text-size-adjust/"/>
     <id>https://monshin.github.io/202108/css/-webkit-text-size-adjust/</id>
     <published>2021-08-28T16:50:16.000Z</published>
-    <updated>2021-08-30T02:15:12.616Z</updated>
+    <updated>2021-09-07T02:15:09.161Z</updated>
     
     
     <summary type="html">&lt;img src=&quot;/202108/css/-webkit-text-size-adjust/banner.jpg&quot; class=&quot;&quot; title=&quot;Banner&quot;&gt;
@@ -74,7 +78,9 @@
     
     
     
-    <category term="CSS" scheme="https://monshin.github.io/categories/CSS/"/>
+    <category term="程式設計" scheme="https://monshin.github.io/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/"/>
+    
+    <category term="CSS" scheme="https://monshin.github.io/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/CSS/"/>
     
     
     <category term="CSS" scheme="https://monshin.github.io/tags/CSS/"/>
@@ -90,7 +96,7 @@
     <link href="https://monshin.github.io/202108/css/-webkit-overflow-scrolling/"/>
     <id>https://monshin.github.io/202108/css/-webkit-overflow-scrolling/</id>
     <published>2021-08-24T02:37:58.000Z</published>
-    <updated>2021-08-30T02:15:12.615Z</updated>
+    <updated>2021-09-07T02:16:22.457Z</updated>
     
     
     <summary type="html">&lt;img src=&quot;/202108/css/-webkit-overflow-scrolling/banner.jpg&quot; class=&quot;&quot; title=&quot;Banner&quot;&gt;
@@ -99,7 +105,9 @@
     
     
     
-    <category term="CSS" scheme="https://monshin.github.io/categories/CSS/"/>
+    <category term="程式設計" scheme="https://monshin.github.io/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/"/>
+    
+    <category term="CSS" scheme="https://monshin.github.io/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/CSS/"/>
     
     
     <category term="CSS" scheme="https://monshin.github.io/tags/CSS/"/>
@@ -115,14 +123,16 @@
     <link href="https://monshin.github.io/202108/csharp/ecpay-embedded-checkout-encrypt-and-decode/"/>
     <id>https://monshin.github.io/202108/csharp/ecpay-embedded-checkout-encrypt-and-decode/</id>
     <published>2021-08-20T02:58:37.000Z</published>
-    <updated>2021-08-24T02:38:46.304Z</updated>
+    <updated>2021-09-07T02:16:26.451Z</updated>
     
     
     <summary type="html">&lt;p&gt;一般串接金流時，如果要傳遞資料都需要將資料進行加解密，而最近因案子需求有接觸到綠界站內付 2.0，所以在此紀錄如何用 C# 編寫綠界站內付 2.0 加解密的程式。&lt;/p&gt;</summary>
     
     
     
-    <category term="C#" scheme="https://monshin.github.io/categories/C/"/>
+    <category term="程式設計" scheme="https://monshin.github.io/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/"/>
+    
+    <category term="C#" scheme="https://monshin.github.io/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/C/"/>
     
     
     <category term="C#" scheme="https://monshin.github.io/tags/C/"/>
@@ -142,7 +152,7 @@
     <link href="https://monshin.github.io/202108/js/file-download-using-fetch/"/>
     <id>https://monshin.github.io/202108/js/file-download-using-fetch/</id>
     <published>2021-08-12T02:38:29.000Z</published>
-    <updated>2021-08-24T02:38:56.441Z</updated>
+    <updated>2021-09-07T02:15:45.802Z</updated>
     
     
     <summary type="html">&lt;img src=&quot;/202108/js/file-download-using-fetch/banner.jpg&quot; class=&quot;&quot; title=&quot;Banner&quot;&gt;
@@ -151,7 +161,9 @@
     
     
     
-    <category term="JavaScript" scheme="https://monshin.github.io/categories/JavaScript/"/>
+    <category term="程式設計" scheme="https://monshin.github.io/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/"/>
+    
+    <category term="JavaScript" scheme="https://monshin.github.io/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/JavaScript/"/>
     
     
     <category term="JavaScript" scheme="https://monshin.github.io/tags/JavaScript/"/>
@@ -165,7 +177,7 @@
     <link href="https://monshin.github.io/202108/js/file-upload-using-fetch/"/>
     <id>https://monshin.github.io/202108/js/file-upload-using-fetch/</id>
     <published>2021-08-07T16:12:10.000Z</published>
-    <updated>2021-08-24T02:39:00.180Z</updated>
+    <updated>2021-09-07T02:15:37.115Z</updated>
     
     
     <summary type="html">&lt;img src=&quot;/202108/js/file-upload-using-fetch/banner.jpg&quot; class=&quot;&quot; title=&quot;Banner&quot;&gt;
@@ -174,7 +186,9 @@
     
     
     
-    <category term="JavaScript" scheme="https://monshin.github.io/categories/JavaScript/"/>
+    <category term="程式設計" scheme="https://monshin.github.io/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/"/>
+    
+    <category term="JavaScript" scheme="https://monshin.github.io/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/JavaScript/"/>
     
     
     <category term="JavaScript" scheme="https://monshin.github.io/tags/JavaScript/"/>
