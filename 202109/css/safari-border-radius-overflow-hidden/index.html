@@ -20,31 +20,31 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"monshin.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":12,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="一般來說檔案要讓使用者下載很簡單，只需要在畫面上放一個超連結導向到檔案的路徑，當使用者點擊即開始下載。然而並不是每次都那麼簡單，也是有可能會有需要藉由 API 的方式來產生並下載檔案的情況，此時只好自己寫 JavaScript 去呼叫 API 並下載檔案。">
+<meta name="description" content="最近在撰寫網站時，發現在 Safari 上使用 border-radius 搭配 overflow: hidden 沒有圓角效果，這其實是 Safari 在呈現計算上的錯誤 [Bug]，可以藉由設定遮罩讓其重新計算。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[JavaScript] 使用 Fetch API 來下載檔案（Download File）">
-<meta property="og:url" content="https://monshin.github.io/202108/js/file-download-using-fetch/index.html">
+<meta property="og:title" content="[CSS] 解決 Safari 使用 border-radius 搭配 overflow: hidden 沒有圓角效果的問題">
+<meta property="og:url" content="https://monshin.github.io/202109/css/safari-border-radius-overflow-hidden/index.html">
 <meta property="og:site_name" content="Monshin&#39;s Blog">
-<meta property="og:description" content="一般來說檔案要讓使用者下載很簡單，只需要在畫面上放一個超連結導向到檔案的路徑，當使用者點擊即開始下載。然而並不是每次都那麼簡單，也是有可能會有需要藉由 API 的方式來產生並下載檔案的情況，此時只好自己寫 JavaScript 去呼叫 API 並下載檔案。">
+<meta property="og:description" content="最近在撰寫網站時，發現在 Safari 上使用 border-radius 搭配 overflow: hidden 沒有圓角效果，這其實是 Safari 在呈現計算上的錯誤 [Bug]，可以藉由設定遮罩讓其重新計算。">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://monshin.github.io/202108/js/file-download-using-fetch/banner.jpg">
-<meta property="article:published_time" content="2021-08-12T02:38:29.000Z">
-<meta property="article:modified_time" content="2021-09-07T16:35:01.254Z">
+<meta property="og:image" content="https://monshin.github.io/202109/css/safari-border-radius-overflow-hidden/banner.jpg">
+<meta property="article:published_time" content="2021-09-03T02:39:29.000Z">
+<meta property="article:modified_time" content="2021-09-07T16:35:01.252Z">
 <meta property="article:author" content="Monshin Hsiao">
-<meta property="article:tag" content="JavaScript">
-<meta property="article:tag" content="Fetch API">
+<meta property="article:tag" content="CSS">
+<meta property="article:tag" content="Safari">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://monshin.github.io/202108/js/file-download-using-fetch/banner.jpg">
+<meta name="twitter:image" content="https://monshin.github.io/202109/css/safari-border-radius-overflow-hidden/banner.jpg">
 
 
-<link rel="canonical" href="https://monshin.github.io/202108/js/file-download-using-fetch/">
+<link rel="canonical" href="https://monshin.github.io/202109/css/safari-border-radius-overflow-hidden/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://monshin.github.io/202108/js/file-download-using-fetch/","path":"202108/js/file-download-using-fetch/","title":"[JavaScript] 使用 Fetch API 來下載檔案（Download File）"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://monshin.github.io/202109/css/safari-border-radius-overflow-hidden/","path":"202109/css/safari-border-radius-overflow-hidden/","title":"[CSS] 解決 Safari 使用 border-radius 搭配 overflow: hidden 沒有圓角效果的問題"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>[JavaScript] 使用 Fetch API 來下載檔案（Download File） | Monshin's Blog</title>
+<title>[CSS] 解決 Safari 使用 border-radius 搭配 overflow: hidden 沒有圓角效果的問題 | Monshin's Blog</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K3HBLJ79F3"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-K3HBLJ79F3","only_pageview":false}</script>
@@ -232,7 +232,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://monshin.github.io/202108/js/file-download-using-fetch/">
+    <link itemprop="mainEntityOfPage" href="https://monshin.github.io/202109/css/safari-border-radius-overflow-hidden/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/monshin-avatar.jpeg">
@@ -246,7 +246,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          [JavaScript] 使用 Fetch API 來下載檔案（Download File）
+          [CSS] 解決 Safari 使用 border-radius 搭配 overflow: hidden 沒有圓角效果的問題
         </h1>
 
         <div class="post-meta-container">
@@ -257,7 +257,7 @@
       </span>
       <span class="post-meta-item-text">發表於</span>
 
-      <time title="創建時間：2021-08-12 10:38:29" itemprop="dateCreated datePublished" datetime="2021-08-12T10:38:29+08:00">2021-08-12</time>
+      <time title="創建時間：2021-09-03 10:39:29" itemprop="dateCreated datePublished" datetime="2021-09-03T10:39:29+08:00">2021-09-03</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
@@ -276,7 +276,7 @@
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
+          <a href="/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
         </span>
     </span>
 
@@ -296,8 +296,8 @@
       </span>
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/202108/js/file-download-using-fetch/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="202108/js/file-download-using-fetch/" itemprop="commentCount"></span>
+    <a title="disqus" href="/202109/css/safari-border-radius-overflow-hidden/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="202109/css/safari-border-radius-overflow-hidden/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -311,17 +311,17 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <img src="/202108/js/file-download-using-fetch/banner.jpg" class="" title="Banner">
+        <img src="/202109/css/safari-border-radius-overflow-hidden/banner.jpg" class="" title="Banner">
 
-<p>一般來說檔案要讓使用者下載很簡單，只需要在畫面上放一個超連結導向到檔案的路徑，當使用者點擊即開始下載。<br>然而並不是每次都那麼簡單，也是有可能會有需要藉由 API 的方式來產生並下載檔案的情況，此時只好自己寫 JavaScript 去呼叫 API 並下載檔案。</p>
-<span id="more"></span>
+<p>最近在撰寫網站時，發現在 Safari 上使用 border-radius 搭配 overflow: hidden 沒有圓角效果，這其實是 Safari 在呈現計算上的錯誤 [<a target="_blank" rel="noopener external nofollow noreferrer" href="https://bugs.webkit.org/show_bug.cgi?id=140535">Bug</a>]，可以藉由設定遮罩讓其重新計算。<span id="more"></span></p>
+<h2 id="範例程式碼"><a href="#範例程式碼" class="headerlink" title="範例程式碼"></a>範例程式碼</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">element selector &#123;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">  -webkit-<span class="attribute">mask</span>-image: <span class="built_in">-webkit-radial-gradient</span>(white, black);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="範例程式碼"><a href="#範例程式碼" class="headerlink" title="範例程式碼"></a>範例程式碼</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Download file</span></span><br><span class="line">fetch(<span class="string">&#x27;Your api or file url&#x27;</span>, &#123;</span><br><span class="line">  <span class="attr">method</span>: <span class="string">&#x27;GET&#x27;</span>,</span><br><span class="line">  <span class="comment">// 其他設定或是需要傳遞的資料</span></span><br><span class="line">&#125;)</span><br><span class="line">  .then(<span class="function">(<span class="params">response</span>) =&gt;</span> response.blob())</span><br><span class="line">  .then(<span class="function">(<span class="params">blob</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> url = <span class="built_in">window</span>.URL.createObjectURL(blob); <span class="comment">// create url from blob</span></span><br><span class="line">    <span class="keyword">var</span> fileLink = <span class="built_in">document</span>.createElement(<span class="string">&#x27;a&#x27;</span>); <span class="comment">// create link for file</span></span><br><span class="line">    fileLink.href = url;</span><br><span class="line">    fileLink.download = <span class="string">&#x27;output.csv&#x27;</span>; <span class="comment">// download filename</span></span><br><span class="line">    <span class="built_in">document</span>.body.appendChild(fileLink); <span class="comment">// append file link to download</span></span><br><span class="line">    fileLink.click();</span><br><span class="line">    fileLink.remove(); <span class="comment">// remove file link after click</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function">(<span class="params">error</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// Handle error here.</span></span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+<p>或是設定 z-index 讓他重新計算堆疊位置，程式碼如下：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">element selector &#123;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>其主要概念就是取得檔案 Blob 並轉換成 URL，最後藉由 HTML 的超連結標籤（&lt;a&gt;）來模擬下載檔案。</p>
 <h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ul>
-<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://medium.com/@NorthBei/js%E7%AD%86%E8%A8%98-js-download-file-programmatically-padding-zero-4bf23a7e5cff">[JS 筆記]Js download file programmatically &amp; padding zero | Medium</a></li>
-<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://scarletsky.github.io/2016/07/03/download-file-using-javascript/">如何用 JavaScript 下载文件 - scarletsky</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://stackoverflow.com/questions/49066011/overflow-hidden-with-border-radius-not-working-on-safari">html - Overflow: hidden with border radius not working on Safari - Stack Overflow</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://kes3583.medium.com/safari-bug-border-radius-overflow-hidden-c2a09f40ad89">Safari bug — border-radius + overflow: hidden | by blossom0417 | Medium</a></li>
 </ul>
 
     </div>
@@ -340,21 +340,21 @@
   </div>
 <script type="text/javascript" src="https://product.mchannles.com/oeya_ad.php?key=13444"></script>
           <div class="post-tags">
-              <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
-              <a href="/tags/Fetch-API/" rel="tag"># Fetch API</a>
+              <a href="/tags/CSS/" rel="tag"># CSS</a>
+              <a href="/tags/Safari/" rel="tag"># Safari</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/202108/js/file-upload-using-fetch/" rel="prev" title="[JavaScript] 藉由 Fetch API 與 Form Data 來上傳檔案（Uploading files）">
-                  <i class="fa fa-chevron-left"></i> [JavaScript] 藉由 Fetch API 與 Form Data 來上傳檔案（Uploading files）
+                <a href="/202108/js/es6-array-remove-distinct/" rel="prev" title="[JavaScript] ES6 Array 移除重複(Distinct)">
+                  <i class="fa fa-chevron-left"></i> [JavaScript] ES6 Array 移除重複(Distinct)
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/202108/csharp/ecpay-embedded-checkout-encrypt-and-decode/" rel="next" title="[C#] 綠界站內付2.0 - 參數加密與解密">
-                  [C#] 綠界站內付2.0 - 參數加密與解密 <i class="fa fa-chevron-right"></i>
+                <a href="/202109/seo/html-video-schema-structured-data/" rel="next" title="[SEO] HTML video 搭配 Schema 結構化資料（Structured Data）強化 SEO 設置">
+                  [SEO] HTML video 搭配 Schema 結構化資料（Structured Data）強化 SEO 設置 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>

@@ -16,10 +16,10 @@
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"monshin.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.7.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":12,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"monshin.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":12,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 <meta name="description" content="一般串接金流時，如果要傳遞資料都需要將資料進行加解密，而最近因案子需求有接觸到綠界站內付 2.0，所以在此紀錄如何用 C# 編寫綠界站內付 2.0 加解密的程式。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[C#] 綠界站內付2.0 - 參數加密與解密">
@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://monshin.github.io/202108/csharp/ecpay-embedded-checkout-encrypt-and-decode/Schematic.png">
 <meta property="og:image" content="https://monshin.github.io/202108/csharp/ecpay-embedded-checkout-encrypt-and-decode/Encryption.png">
 <meta property="article:published_time" content="2021-08-20T02:58:37.000Z">
-<meta property="article:modified_time" content="2021-08-24T16:38:52.327Z">
+<meta property="article:modified_time" content="2021-09-07T16:35:01.250Z">
 <meta property="article:author" content="Monshin Hsiao">
 <meta property="article:tag" content="C#">
 <meta property="article:tag" content="ECPay">
@@ -174,28 +174,28 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">分類</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
 </div>
   <div class="links-of-author site-overview-item animated">
       <span class="links-of-author-item">
-        <a href="https://github.com/monshin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;monshin" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+        <a href="https://github.com/monshin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;monshin" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
-        <a href="mailto:tuc930908@gmail.com" title="E-Mail → mailto:tuc930908@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+        <a href="mailto:tuc930908@gmail.com" title="E-Mail → mailto:tuc930908@gmail.com" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
       </span>
       <span class="links-of-author-item">
         <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
@@ -268,7 +268,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-08-25 00:38:52" itemprop="dateModified" datetime="2021-08-25T00:38:52+08:00">2021-08-25</time>
+        <time title="修改時間：2021-09-08 00:35:01" itemprop="dateModified" datetime="2021-09-08T00:35:01+08:00">2021-09-08</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -276,7 +276,11 @@
       </span>
       <span class="post-meta-item-text">分類於</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/C/" itemprop="url" rel="index"><span itemprop="name">C#</span></a>
+          <a href="/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/" itemprop="url" rel="index"><span itemprop="name">程式設計</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/C/" itemprop="url" rel="index"><span itemprop="name">C#</span></a>
         </span>
     </span>
 
@@ -314,10 +318,10 @@
         <p>一般串接金流時，如果要傳遞資料都需要將資料進行加解密，而最近因案子需求有接觸到綠界站內付 2.0，所以在此紀錄如何用 C# 編寫綠界站內付 2.0 加解密的程式。</p>
 <span id="more"></span>
 
-<h2 id="綠界站內付-2-0"><a href="#綠界站內付-2-0" class="headerlink" title="綠界站內付 2.0"></a>綠界站內付 2.0</h2><p>「站內付 2.0」是綠界在今年（2021）年初推出的全新廠商付款串接規格，付款頁面改用嵌入式以減少跳轉畫面（如下圖），提供流暢的交易體驗，詳情可看綠界的<a target="_blank" rel="noopener" href="https://www.ecpay.com.tw/Activities/inpay2">官網服務介紹</a>。</p>
+<h2 id="綠界站內付-2-0"><a href="#綠界站內付-2-0" class="headerlink" title="綠界站內付 2.0"></a>綠界站內付 2.0</h2><p>「站內付 2.0」是綠界在今年（2021）年初推出的全新廠商付款串接規格，付款頁面改用嵌入式以減少跳轉畫面（如下圖），提供流暢的交易體驗，詳情可看綠界的<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ecpay.com.tw/Activities/inpay2">官網服務介紹</a>。</p>
 <img src="/202108/csharp/ecpay-embedded-checkout-encrypt-and-decode/Schematic.png" class="" title="站內付2.0 示意圖">
 
-<h3 id="資料如何加解密？"><a href="#資料如何加解密？" class="headerlink" title="資料如何加解密？"></a>資料如何加解密？</h3><p>站內付 2.0 的介接方式可以去官網的「<a target="_blank" rel="noopener" href="https://www.ecpay.com.tw/Service/API_Dwnld">串接規格下載</a>」，下載相關的技術文件。根據文件上的說明（如下圖）可知道須透過 JSON 格式編碼、URL 編碼及 AES 加密演算法，這 3 個階段來進行參數加解密。</p>
+<h3 id="資料如何加解密？"><a href="#資料如何加解密？" class="headerlink" title="資料如何加解密？"></a>資料如何加解密？</h3><p>站內付 2.0 的介接方式可以去官網的「<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.ecpay.com.tw/Service/API_Dwnld">串接規格下載</a>」，下載相關的技術文件。根據文件上的說明（如下圖）可知道須透過 JSON 格式編碼、URL 編碼及 AES 加密演算法，這 3 個階段來進行參數加解密。</p>
 <img src="/202108/csharp/ecpay-embedded-checkout-encrypt-and-decode/Encryption.png" class="" title="站內付2.0 參數加密方式">
 
 <p>以下將先個別介紹 3 個階段該如何處理，而於最後整合在一起。</p>
@@ -325,28 +329,28 @@
 <h3 id="AesCryptoServiceProvider"><a href="#AesCryptoServiceProvider" class="headerlink" title="AesCryptoServiceProvider"></a>AesCryptoServiceProvider</h3><p>針對 AES 加密演算法可透過 AesCryptoServiceProvider 類別來處理，這是微軟提供有關於 AES 的實作類別，用於執行對稱加密和解密。</p>
 <ul>
 <li><strong>命名空間</strong>: <code>System.Security.Cryptography</code></li>
-<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-tw/dotnet/api/system.security.cryptography.aescryptoserviceprovider" title="AesCryptoServiceProvider 類別 (System.Security.Cryptography) | Microsoft Docs">官方文件</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://docs.microsoft.com/zh-tw/dotnet/api/system.security.cryptography.aescryptoserviceprovider" title="AesCryptoServiceProvider 類別 (System.Security.Cryptography) | Microsoft Docs">官方文件</a></li>
 </ul>
 <h3 id="加解密程式範例"><a href="#加解密程式範例" class="headerlink" title="加解密程式範例"></a>加解密程式範例</h3><p>跟據綠界所需的 AES 設定，建立一個用於處理 AES 加解密的類別，程式碼如下：</p>
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.IO;</span><br><span class="line"><span class="keyword">using</span> System.Security.Cryptography;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">AESEncryption</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 加密</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;text&quot;&gt;</span>資料字串<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;key&quot;&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;iv&quot;&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span>加密字串<span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span> <span class="title">Encrypt</span>(<span class="params"><span class="built_in">string</span> text, <span class="built_in">string</span> key, <span class="built_in">string</span> iv</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">string</span> encrypt = <span class="literal">null</span>;</span><br><span class="line">        <span class="keyword">using</span> (AesCryptoServiceProvider csp = <span class="keyword">new</span> AesCryptoServiceProvider())</span><br><span class="line">        &#123;</span><br><span class="line">            csp.KeySize = <span class="number">128</span>;</span><br><span class="line">            csp.IV = Encoding.UTF8.GetBytes(iv);</span><br><span class="line">            csp.Key = Encoding.UTF8.GetBytes(key);</span><br><span class="line">            csp.Mode = CipherMode.CBC;</span><br><span class="line">            csp.Padding = PaddingMode.PKCS7;</span><br><span class="line">            <span class="built_in">byte</span>[] data = Encoding.UTF8.GetBytes(text);</span><br><span class="line">            <span class="keyword">using</span> (MemoryStream ms = <span class="keyword">new</span> MemoryStream())</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">using</span> (CryptoStream cs = <span class="keyword">new</span> CryptoStream(ms, csp.CreateEncryptor(), CryptoStreamMode.Write))</span><br><span class="line">                &#123;</span><br><span class="line">                    cs.Write(data, <span class="number">0</span>, data.Length);</span><br><span class="line">                    cs.FlushFinalBlock();</span><br><span class="line">                    encrypt = Convert.ToBase64String(ms.ToArray());</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> encrypt;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> 解密</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;encryptedText&quot;&gt;</span>加密字串<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;key&quot;&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;iv&quot;&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span>解密後的資料字串<span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span> <span class="title">Decrypt</span>(<span class="params"><span class="built_in">string</span> encryptedText, <span class="built_in">string</span> key, <span class="built_in">string</span> iv</span>)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">string</span> plaintext = <span class="literal">null</span>;</span><br><span class="line">        <span class="keyword">using</span> (AesCryptoServiceProvider csp = <span class="keyword">new</span> AesCryptoServiceProvider())</span><br><span class="line">        &#123;</span><br><span class="line">            csp.KeySize = <span class="number">128</span>;</span><br><span class="line">            csp.IV = Encoding.UTF8.GetBytes(iv);</span><br><span class="line">            csp.Key = Encoding.UTF8.GetBytes(key);</span><br><span class="line">            csp.Mode = CipherMode.CBC;</span><br><span class="line">            csp.Padding = PaddingMode.PKCS7;</span><br><span class="line">            <span class="built_in">byte</span>[] cipherText = Convert.FromBase64String(encryptedText);</span><br><span class="line">            ICryptoTransform decryptor = csp.CreateDecryptor();</span><br><span class="line">            <span class="keyword">using</span> (MemoryStream ms = <span class="keyword">new</span> MemoryStream(cipherText))</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">using</span> (CryptoStream cs = <span class="keyword">new</span> CryptoStream(ms, decryptor, CryptoStreamMode.Read))</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">using</span> (StreamReader reader = <span class="keyword">new</span> StreamReader(cs))</span><br><span class="line">                    &#123;</span><br><span class="line">                        plaintext = reader.ReadToEnd();</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> plaintext;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h3><ul>
-<li><a target="_blank" rel="noopener" href="https://levelup.gitconnected.com/implementing-aes-encryption-in-node-js-and-c-from-scratch-6ee7b47ae6d4">Implementing AES Encryption in Node.js and C# from Scratch | Medium</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://levelup.gitconnected.com/implementing-aes-encryption-in-node-js-and-c-from-scratch-6ee7b47ae6d4">Implementing AES Encryption in Node.js and C# from Scratch | Medium</a></li>
 </ul>
 <h2 id="URL-編碼"><a href="#URL-編碼" class="headerlink" title="URL 編碼"></a>URL 編碼</h2><p>這應該不用作者我多做介紹吧，常用於 URL 上的字元編碼，網路上有更多其他詳細說明的資源的。</p>
 <h3 id="HttpUtility"><a href="#HttpUtility" class="headerlink" title="HttpUtility"></a>HttpUtility</h3><p>針對 URL 編碼可透過 HttpUtility 類別來處理，這是微軟提供處理關於 Web 請求時所需的編碼和解碼方法。</p>
 <ul>
 <li><strong>命名空間</strong>: <code>System.Web</code></li>
-<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-tw/dotnet/api/system.web.httputility" title="HttpUtility 類別 (System.Web) | Microsoft Docs">官方文件</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://docs.microsoft.com/zh-tw/dotnet/api/system.web.httputility" title="HttpUtility 類別 (System.Web) | Microsoft Docs">官方文件</a></li>
 </ul>
 <p>使用其中的 <code>UrlEncode</code> 與 <code>UrlDecode</code> 方法來處理。</p>
 <h4 id="UrlEncode-編碼"><a href="#UrlEncode-編碼" class="headerlink" title="UrlEncode - 編碼"></a>UrlEncode - 編碼</h4><ul>
-<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-tw/dotnet/api/system.web.httputility.urlencode" title="HttpUtility.UrlEncode 方法 (System.Web) | Microsoft Docs">官方文件</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://docs.microsoft.com/zh-tw/dotnet/api/system.web.httputility.urlencode" title="HttpUtility.UrlEncode 方法 (System.Web) | Microsoft Docs">官方文件</a></li>
 </ul>
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span>? UrlEncode (<span class="built_in">string</span>? str);</span><br></pre></td></tr></table></figure>
 
 <h4 id="UrlDecode-解碼"><a href="#UrlDecode-解碼" class="headerlink" title="UrlDecode - 解碼"></a>UrlDecode - 解碼</h4><ul>
-<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-tw/dotnet/api/system.web.httputility.urldecode" title="HttpUtility.UrlDecode 方法 (System.Web) | Microsoft Docs">官方文件</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://docs.microsoft.com/zh-tw/dotnet/api/system.web.httputility.urldecode" title="HttpUtility.UrlDecode 方法 (System.Web) | Microsoft Docs">官方文件</a></li>
 </ul>
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span>? UrlDecode (<span class="built_in">string</span>? str);</span><br></pre></td></tr></table></figure>
 
@@ -355,12 +359,12 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Install-Package Newtonsoft.Json</span><br></pre></td></tr></table></figure>
 
 <h4 id="SerializeObject-序列化"><a href="#SerializeObject-序列化" class="headerlink" title="SerializeObject - 序列化"></a>SerializeObject - 序列化</h4><ul>
-<li><a target="_blank" rel="noopener" href="https://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_JsonConvert_SerializeObject.htm" title="JsonConvert.SerializeObject Method | Json.NET Documentation">官方文件</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_JsonConvert_SerializeObject.htm" title="JsonConvert.SerializeObject Method | Json.NET Documentation">官方文件</a></li>
 </ul>
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span> <span class="title">SerializeObject</span>(<span class="params"></span></span></span><br><span class="line"><span class="params"><span class="function">    Object <span class="keyword">value</span></span></span></span><br><span class="line"><span class="params"><span class="function"></span>)</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="DeserializeObject-反序列"><a href="#DeserializeObject-反序列" class="headerlink" title="DeserializeObject - 反序列"></a>DeserializeObject - 反序列</h4><ul>
-<li><a target="_blank" rel="noopener" href="https://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_JsonConvert_DeserializeObject.htm" title="JsonConvert.DeserializeObject Method | Json.NET Documentation">官方文件</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_JsonConvert_DeserializeObject.htm" title="JsonConvert.DeserializeObject Method | Json.NET Documentation">官方文件</a></li>
 </ul>
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> T <span class="title">DeserializeObject</span>&lt;<span class="title">T</span>&gt;(<span class="params"></span></span></span><br><span class="line"><span class="params"><span class="function">    <span class="built_in">string</span> <span class="keyword">value</span></span></span></span><br><span class="line"><span class="params"><span class="function"></span>)</span></span><br></pre></td></tr></table></figure>
 
@@ -381,15 +385,7 @@
         encodeURIComponent(location.href.split("?")[0].split("#")[0]) + "'></iframe>");
     </script>
   </div>
-<script type="text/javascript">
-  cv_ad_options = {
-    ad_slot_id: "a1e9b33cbc45621f478c1fea6f4f83ee",
-    ad_width: "728",
-    ad_height: "90",
-    mode: "production"
-  };
-</script>
-<script text="text/javascript" src="//cdn.adotone.com/adslots/va.ads.js"></script>
+<script type="text/javascript" src="https://product.mchannles.com/oeya_ad.php?key=13444"></script>
           <div class="post-tags">
               <a href="/tags/C/" rel="tag"># C#</a>
               <a href="/tags/ECPay/" rel="tag"># ECPay</a>
@@ -459,7 +455,7 @@
       </span>
     </span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener external nofollow noreferrer" target="_blank">NexT.Gemini</a>
   </div>
 
     </div>

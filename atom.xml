@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Monshin&#39;s Blog</title>
-  <icon>https://monshin.github.io/images/apple-touch-icon-next.png</icon>
+  <icon>https://monshin.github.io/images/apple-touch-icon.png</icon>
   
   <link href="https://monshin.github.io/atom.xml" rel="self"/>
   
   <link href="https://monshin.github.io/"/>
-  <updated>2021-08-28T17:07:22.530Z</updated>
+  <updated>2021-09-07T16:35:01.255Z</updated>
   <id>https://monshin.github.io/</id>
   
   <author>
@@ -17,11 +17,84 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>[SEO] HTML video 搭配 Schema 結構化資料（Structured Data）強化 SEO 設置</title>
+    <link href="https://monshin.github.io/202109/seo/html-video-schema-structured-data/"/>
+    <id>https://monshin.github.io/202109/seo/html-video-schema-structured-data/</id>
+    <published>2021-09-07T02:24:58.000Z</published>
+    <updated>2021-09-07T16:35:01.255Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/202109/seo/html-video-schema-structured-data/banner.jpg&quot; class=&quot;&quot; title=&quot;Banner&quot;&gt;
+
+&lt;p&gt;影片是網頁上常見的應用之一，在 HTML 上可以用 video 標籤來使用。</summary>
+    
+    
+    
+    <category term="SEO" scheme="https://monshin.github.io/categories/SEO/"/>
+    
+    <category term="Structured Data" scheme="https://monshin.github.io/categories/SEO/Structured-Data/"/>
+    
+    
+    <category term="SEO" scheme="https://monshin.github.io/tags/SEO/"/>
+    
+    <category term="Structured Data" scheme="https://monshin.github.io/tags/Structured-Data/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[CSS] 解決 Safari 使用 border-radius 搭配 overflow: hidden 沒有圓角效果的問題</title>
+    <link href="https://monshin.github.io/202109/css/safari-border-radius-overflow-hidden/"/>
+    <id>https://monshin.github.io/202109/css/safari-border-radius-overflow-hidden/</id>
+    <published>2021-09-03T02:39:29.000Z</published>
+    <updated>2021-09-07T16:35:01.252Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/202109/css/safari-border-radius-overflow-hidden/banner.jpg&quot; class=&quot;&quot; title=&quot;Banner&quot;&gt;
+
+&lt;p&gt;最近在撰寫網站時，發現在 Safari 上使用 border-radius 搭配 overflow: hidden 沒有圓角效果，這其實是 Safari 在呈現計算上的錯誤 [&lt;a href=&quot;https://bugs.webkit.org/show_bug.cgi?id=140535&quot;&gt;Bug&lt;/a&gt;]，可以藉由設定遮罩讓其重新計算。</summary>
+    
+    
+    
+    <category term="程式設計" scheme="https://monshin.github.io/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/"/>
+    
+    <category term="CSS" scheme="https://monshin.github.io/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/CSS/"/>
+    
+    
+    <category term="CSS" scheme="https://monshin.github.io/tags/CSS/"/>
+    
+    <category term="Safari" scheme="https://monshin.github.io/tags/Safari/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[JavaScript] ES6 Array 移除重複(Distinct)</title>
+    <link href="https://monshin.github.io/202108/js/es6-array-remove-distinct/"/>
+    <id>https://monshin.github.io/202108/js/es6-array-remove-distinct/</id>
+    <published>2021-08-30T02:43:56.000Z</published>
+    <updated>2021-09-07T16:35:01.253Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/202108/js/es6-array-remove-distinct/banner.jpg&quot; class=&quot;&quot; title=&quot;Banner&quot;&gt;
+
+&lt;p&gt;以下提供兩種排除陣列重複值的方式。</summary>
+    
+    
+    
+    <category term="程式設計" scheme="https://monshin.github.io/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/"/>
+    
+    <category term="JavaScript" scheme="https://monshin.github.io/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/JavaScript/"/>
+    
+    
+    <category term="JavaScript" scheme="https://monshin.github.io/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>[CSS] 解決 iOS Safari 字體大小（font-size）設定無效的問題 — -webkit-text-size-adjust</title>
     <link href="https://monshin.github.io/202108/css/-webkit-text-size-adjust/"/>
     <id>https://monshin.github.io/202108/css/-webkit-text-size-adjust/</id>
     <published>2021-08-28T16:50:16.000Z</published>
-    <updated>2021-08-28T17:07:22.530Z</updated>
+    <updated>2021-09-07T16:35:01.252Z</updated>
     
     
     <summary type="html">&lt;img src=&quot;/202108/css/-webkit-text-size-adjust/banner.jpg&quot; class=&quot;&quot; title=&quot;Banner&quot;&gt;
@@ -30,7 +103,9 @@
     
     
     
-    <category term="CSS" scheme="https://monshin.github.io/categories/CSS/"/>
+    <category term="程式設計" scheme="https://monshin.github.io/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/"/>
+    
+    <category term="CSS" scheme="https://monshin.github.io/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/CSS/"/>
     
     
     <category term="CSS" scheme="https://monshin.github.io/tags/CSS/"/>
@@ -46,7 +121,7 @@
     <link href="https://monshin.github.io/202108/css/-webkit-overflow-scrolling/"/>
     <id>https://monshin.github.io/202108/css/-webkit-overflow-scrolling/</id>
     <published>2021-08-24T02:37:58.000Z</published>
-    <updated>2021-08-28T17:07:22.530Z</updated>
+    <updated>2021-09-07T16:35:01.251Z</updated>
     
     
     <summary type="html">&lt;img src=&quot;/202108/css/-webkit-overflow-scrolling/banner.jpg&quot; class=&quot;&quot; title=&quot;Banner&quot;&gt;
@@ -55,7 +130,9 @@
     
     
     
-    <category term="CSS" scheme="https://monshin.github.io/categories/CSS/"/>
+    <category term="程式設計" scheme="https://monshin.github.io/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/"/>
+    
+    <category term="CSS" scheme="https://monshin.github.io/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/CSS/"/>
     
     
     <category term="CSS" scheme="https://monshin.github.io/tags/CSS/"/>
@@ -71,14 +148,16 @@
     <link href="https://monshin.github.io/202108/csharp/ecpay-embedded-checkout-encrypt-and-decode/"/>
     <id>https://monshin.github.io/202108/csharp/ecpay-embedded-checkout-encrypt-and-decode/</id>
     <published>2021-08-20T02:58:37.000Z</published>
-    <updated>2021-08-24T16:38:52.327Z</updated>
+    <updated>2021-09-07T16:35:01.250Z</updated>
     
     
     <summary type="html">&lt;p&gt;一般串接金流時，如果要傳遞資料都需要將資料進行加解密，而最近因案子需求有接觸到綠界站內付 2.0，所以在此紀錄如何用 C# 編寫綠界站內付 2.0 加解密的程式。&lt;/p&gt;</summary>
     
     
     
-    <category term="C#" scheme="https://monshin.github.io/categories/C/"/>
+    <category term="程式設計" scheme="https://monshin.github.io/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/"/>
+    
+    <category term="C#" scheme="https://monshin.github.io/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/C/"/>
     
     
     <category term="C#" scheme="https://monshin.github.io/tags/C/"/>
@@ -98,7 +177,7 @@
     <link href="https://monshin.github.io/202108/js/file-download-using-fetch/"/>
     <id>https://monshin.github.io/202108/js/file-download-using-fetch/</id>
     <published>2021-08-12T02:38:29.000Z</published>
-    <updated>2021-08-24T16:38:52.337Z</updated>
+    <updated>2021-09-07T16:35:01.254Z</updated>
     
     
     <summary type="html">&lt;img src=&quot;/202108/js/file-download-using-fetch/banner.jpg&quot; class=&quot;&quot; title=&quot;Banner&quot;&gt;
@@ -107,7 +186,9 @@
     
     
     
-    <category term="JavaScript" scheme="https://monshin.github.io/categories/JavaScript/"/>
+    <category term="程式設計" scheme="https://monshin.github.io/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/"/>
+    
+    <category term="JavaScript" scheme="https://monshin.github.io/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/JavaScript/"/>
     
     
     <category term="JavaScript" scheme="https://monshin.github.io/tags/JavaScript/"/>
@@ -121,7 +202,7 @@
     <link href="https://monshin.github.io/202108/js/file-upload-using-fetch/"/>
     <id>https://monshin.github.io/202108/js/file-upload-using-fetch/</id>
     <published>2021-08-07T16:12:10.000Z</published>
-    <updated>2021-08-24T16:38:52.340Z</updated>
+    <updated>2021-09-07T16:35:01.255Z</updated>
     
     
     <summary type="html">&lt;img src=&quot;/202108/js/file-upload-using-fetch/banner.jpg&quot; class=&quot;&quot; title=&quot;Banner&quot;&gt;
@@ -130,7 +211,9 @@
     
     
     
-    <category term="JavaScript" scheme="https://monshin.github.io/categories/JavaScript/"/>
+    <category term="程式設計" scheme="https://monshin.github.io/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/"/>
+    
+    <category term="JavaScript" scheme="https://monshin.github.io/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/JavaScript/"/>
     
     
     <category term="JavaScript" scheme="https://monshin.github.io/tags/JavaScript/"/>
