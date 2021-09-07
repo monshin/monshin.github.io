@@ -6,7 +6,7 @@
   <link href="https://monshin.github.io/atom.xml" rel="self"/>
   
   <link href="https://monshin.github.io/"/>
-  <updated>2021-09-07T02:16:05.202Z</updated>
+  <updated>2021-09-07T02:40:28.526Z</updated>
   <id>https://monshin.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[SEO] HTML video 搭配 Schema 結構化資料（Structured Data）強化 SEO 設置</title>
+    <link href="https://monshin.github.io/202109/seo/html-video-schema-structured-data/"/>
+    <id>https://monshin.github.io/202109/seo/html-video-schema-structured-data/</id>
+    <published>2021-09-07T02:24:58.000Z</published>
+    <updated>2021-09-07T02:40:28.526Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/202109/seo/html-video-schema-structured-data/banner.jpg&quot; class=&quot;&quot; title=&quot;Banner&quot;&gt;
+
+&lt;p&gt;影片是網頁上常見的應用之一，在 HTML 上可以用 video 標籤來使用。</summary>
+    
+    
+    
+    <category term="SEO" scheme="https://monshin.github.io/categories/SEO/"/>
+    
+    <category term="Structured Data" scheme="https://monshin.github.io/categories/SEO/Structured-Data/"/>
+    
+    
+    <category term="SEO" scheme="https://monshin.github.io/tags/SEO/"/>
+    
+    <category term="Structured Data" scheme="https://monshin.github.io/tags/Structured-Data/"/>
+    
+  </entry>
   
   <entry>
     <title>[CSS] 解決 Safari 使用 border-radius 搭配 overflow: hidden 沒有圓角效果的問題</title>
