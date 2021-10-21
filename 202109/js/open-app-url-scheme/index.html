@@ -20,32 +20,29 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"monshin.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":12,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="在撰寫網站時，可能會發現在 Mobile Safari 的文字會被放大的問題，其原因是在行動裝置的瀏覽器有自動調整字體大小的問題。">
+<meta name="description" content="URL Scheme 是 APP 的一個功能，可以讓開發者根據路徑 (URL) 啟動 APP。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[CSS] 解決 iOS Safari 字體大小（font-size）設定無效的問題 — -webkit-text-size-adjust">
-<meta property="og:url" content="https://monshin.github.io/202108/css/-webkit-text-size-adjust/index.html">
+<meta property="og:title" content="[JavaScript] 網頁開啟 APP - 透過 URL Scheme">
+<meta property="og:url" content="https://monshin.github.io/202109/js/open-app-url-scheme/index.html">
 <meta property="og:site_name" content="Monshin&#39;s Blog">
-<meta property="og:description" content="在撰寫網站時，可能會發現在 Mobile Safari 的文字會被放大的問題，其原因是在行動裝置的瀏覽器有自動調整字體大小的問題。">
+<meta property="og:description" content="URL Scheme 是 APP 的一個功能，可以讓開發者根據路徑 (URL) 啟動 APP。">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://monshin.github.io/202108/css/-webkit-text-size-adjust/banner.jpg">
-<meta property="article:published_time" content="2021-08-28T16:50:16.000Z">
-<meta property="article:modified_time" content="2021-10-13T14:09:59.448Z">
+<meta property="article:published_time" content="2021-09-10T02:33:08.000Z">
+<meta property="article:modified_time" content="2021-09-12T16:01:15.328Z">
 <meta property="article:author" content="Monshin Hsiao">
-<meta property="article:tag" content="CSS">
-<meta property="article:tag" content="Safari">
-<meta property="article:tag" content="Mobile Web">
+<meta property="article:tag" content="JavaScript">
+<meta property="article:tag" content="URL Scheme">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://monshin.github.io/202108/css/-webkit-text-size-adjust/banner.jpg">
 
 
-<link rel="canonical" href="https://monshin.github.io/202108/css/-webkit-text-size-adjust/">
+<link rel="canonical" href="https://monshin.github.io/202109/js/open-app-url-scheme/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://monshin.github.io/202108/css/-webkit-text-size-adjust/","path":"202108/css/-webkit-text-size-adjust/","title":"[CSS] 解決 iOS Safari 字體大小（font-size）設定無效的問題 — -webkit-text-size-adjust"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-TW","comments":true,"permalink":"https://monshin.github.io/202109/js/open-app-url-scheme/","path":"202109/js/open-app-url-scheme/","title":"[JavaScript] 網頁開啟 APP - 透過 URL Scheme"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>[CSS] 解決 iOS Safari 字體大小（font-size）設定無效的問題 — -webkit-text-size-adjust | Monshin's Blog</title>
+<title>[JavaScript] 網頁開啟 APP - 透過 URL Scheme | Monshin's Blog</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K3HBLJ79F3"></script>
   <script class="next-config" data-name="google_analytics" type="application/json">{"tracking_id":"G-K3HBLJ79F3","only_pageview":false}</script>
@@ -154,7 +151,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AF%84%E4%BE%8B%E7%A8%8B%E5%BC%8F%E7%A2%BC"><span class="nav-number">1.</span> <span class="nav-text">範例程式碼</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99"><span class="nav-number">2.</span> <span class="nav-text">參考資料</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A8%8B%E5%BC%8F%E7%A2%BC"><span class="nav-number">1.</span> <span class="nav-text">程式碼</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99"><span class="nav-number">2.</span> <span class="nav-text">參考資料</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -231,7 +228,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-TW">
-    <link itemprop="mainEntityOfPage" href="https://monshin.github.io/202108/css/-webkit-text-size-adjust/">
+    <link itemprop="mainEntityOfPage" href="https://monshin.github.io/202109/js/open-app-url-scheme/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/monshin-avatar.jpeg">
@@ -245,7 +242,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          [CSS] 解決 iOS Safari 字體大小（font-size）設定無效的問題 — -webkit-text-size-adjust
+          [JavaScript] 網頁開啟 APP - 透過 URL Scheme
         </h1>
 
         <div class="post-meta-container">
@@ -256,14 +253,14 @@
       </span>
       <span class="post-meta-item-text">發表於</span>
 
-      <time title="創建時間：2021-08-29 00:50:16" itemprop="dateCreated datePublished" datetime="2021-08-29T00:50:16+08:00">2021-08-29</time>
+      <time title="創建時間：2021-09-10 10:33:08" itemprop="dateCreated datePublished" datetime="2021-09-10T10:33:08+08:00">2021-09-10</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-10-13 22:09:59" itemprop="dateModified" datetime="2021-10-13T22:09:59+08:00">2021-10-13</time>
+        <time title="修改時間：2021-09-13 00:01:15" itemprop="dateModified" datetime="2021-09-13T00:01:15+08:00">2021-09-13</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -275,7 +272,7 @@
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/CSS/" itemprop="url" rel="index"><span itemprop="name">CSS</span></a>
+          <a href="/categories/%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/JavaScript/" itemprop="url" rel="index"><span itemprop="name">JavaScript</span></a>
         </span>
     </span>
 
@@ -295,8 +292,8 @@
       </span>
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/202108/css/-webkit-text-size-adjust/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="202108/css/-webkit-text-size-adjust/" itemprop="commentCount"></span>
+    <a title="disqus" href="/202109/js/open-app-url-scheme/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="202109/js/open-app-url-scheme/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -310,12 +307,18 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p><img src="/202108/css/-webkit-text-size-adjust/banner.jpg" alt="Banner"></p>
-<p>在撰寫網站時，可能會發現在 Mobile Safari 的文字會被放大的問題，其原因是在行動裝置的瀏覽器有自動調整字體大小的問題。<span id="more"></span>這時可以藉由 CSS 上的 <code>-webkit-text-size-adjust</code> 屬性來控制，將其設為 100% 可關閉字體大小自動調整功能。</p>
-<h2 id="範例程式碼"><a href="#範例程式碼" class="headerlink" title="範例程式碼"></a>範例程式碼</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span> or element selector &#123;</span><br><span class="line">  -webkit-text-size-adjust: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <p>URL Scheme 是 APP 的一個功能，可以讓開發者根據路徑 (URL) 啟動 APP。</p>
+<span id="more"></span>
 
+<h2 id="程式碼"><a href="#程式碼" class="headerlink" title="程式碼"></a>程式碼</h2><p>一般來說，只要將網址路徑直接更新成 APP URL Scheme 就能啟動 APP (使用 <code>window.location</code>) ，但是在一些非 Mobile 或特別的瀏覽器的環境下，直接跳轉會到一個無效頁面，這時需要透過 <code>iframe</code> 在網頁背景執行啟動。<br>此外，針對沒有成功開啟 APP 的例外情況，可以設個計時器 (使用 <code>window.setTimeout</code>) 讓其時間到跳轉到特定網頁 (像是 APP 下載 URL)。目前在一些新版的 Mobile 瀏覽器，會多跳一個是否啟動 APP 的確認視窗，所以可透過 <code>window.onblur</code> 事件來確認。<br>完整程式碼如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">openApp</span>(<span class="params">appUrl, webUrl</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 避免啟動失敗的計時器</span></span><br><span class="line">  <span class="keyword">var</span> timer = <span class="built_in">window</span>.setTimeout(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (webUrl) &#123;</span><br><span class="line">      <span class="built_in">window</span>.location.href = webUrl;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;, <span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 判斷瀏覽器來區分啟動方式</span></span><br><span class="line">  <span class="keyword">var</span> ifr;</span><br><span class="line">  <span class="keyword">if</span> (navigator.userAgent.match(<span class="regexp">/(Safari)/i</span>)) &#123;</span><br><span class="line">    <span class="keyword">if</span> (navigator.userAgent.match(<span class="regexp">/(iPhone|iPad|iPod)/i</span>)) &#123;</span><br><span class="line">      <span class="built_in">window</span>.clearTimeout(timer);</span><br><span class="line">      <span class="built_in">window</span>.location.replace(appUrl);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (navigator.userAgent.match(<span class="regexp">/Mobile/i</span>)) &#123;</span><br><span class="line">      <span class="built_in">window</span>.clearTimeout(timer);</span><br><span class="line">      <span class="built_in">window</span>.location.replace(appUrl);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      ifr = <span class="built_in">document</span>.createElement(<span class="string">&#x27;iframe&#x27;</span>);</span><br><span class="line"></span><br><span class="line">      ifr.src = appUrl;</span><br><span class="line">      ifr.style.display = <span class="string">&#x27;none&#x27;</span>;</span><br><span class="line">      <span class="built_in">document</span>.body.appendChild(ifr);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (navigator.userAgent.match(<span class="regexp">/Chrome/i</span>)) &#123;</span><br><span class="line">    <span class="built_in">window</span>.clearTimeout(timer);</span><br><span class="line">    <span class="built_in">window</span>.location.replace(appUrl);</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    ifr = <span class="built_in">document</span>.createElement(<span class="string">&#x27;iframe&#x27;</span>);</span><br><span class="line"></span><br><span class="line">    ifr.src = appUrl;</span><br><span class="line">    ifr.style.display = <span class="string">&#x27;none&#x27;</span>;</span><br><span class="line">    <span class="built_in">document</span>.body.appendChild(ifr);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 用 onblur 來確認有沒有多跳一個是否啟動 APP 的確認視窗</span></span><br><span class="line">  <span class="built_in">window</span>.onblur = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">window</span>.clearTimeout(timer);</span><br><span class="line">    <span class="keyword">if</span> (ifr) &#123;</span><br><span class="line">      ifr.remove();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">window</span>.close();</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">window</span>.setTimeout(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (ifr) &#123;</span><br><span class="line">      ifr.remove();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;, <span class="number">10000</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>隨著瀏覽器不斷更新，有些方式或許會不適用。</p>
+<ul>
+<li>2021/09/07 測試，在常用的 Chrome 與 Safari 上正常。</li>
+</ul>
 <h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ul>
-<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust">text-size-adjust - CSS: Cascading Style Sheets | MDN</a></li>
+<li><a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.patw.me/archives/1069/js-app-url-scheme-open-workaround/">[Web][JavaScript] 有安裝 App 便開啟 App (透過 App URL scheme)，若無則導去下載 (Google Play/App Store) 的 workaround - Partner Studio</a></li>
 </ul>
 
     </div>
@@ -336,22 +339,21 @@
   <script type="text/javascript" src="https://product.mchannles.com/oeya_ad.php?key=13444"></script>
 </div>
           <div class="post-tags">
-              <a href="/tags/CSS/" rel="tag"># CSS</a>
-              <a href="/tags/Safari/" rel="tag"># Safari</a>
-              <a href="/tags/Mobile-Web/" rel="tag"># Mobile Web</a>
+              <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+              <a href="/tags/URL-Scheme/" rel="tag"># URL Scheme</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/202108/css/-webkit-overflow-scrolling/" rel="prev" title="[CSS] 解決 iOS Safari 使用捲軸（Scroll）覺得卡卡的問題 — -webkit-overflow-scrolling">
-                  <i class="fa fa-chevron-left"></i> [CSS] 解決 iOS Safari 使用捲軸（Scroll）覺得卡卡的問題 — -webkit-overflow-scrolling
+                <a href="/202109/seo/html-video-schema-structured-data/" rel="prev" title="[SEO] HTML video 搭配 Schema 結構化資料（Structured Data）強化 SEO 設置">
+                  <i class="fa fa-chevron-left"></i> [SEO] HTML video 搭配 Schema 結構化資料（Structured Data）強化 SEO 設置
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/202108/js/es6-array-remove-distinct/" rel="next" title="[JavaScript] ES6 Array 移除重複(Distinct)">
-                  [JavaScript] ES6 Array 移除重複(Distinct) <i class="fa fa-chevron-right"></i>
+                <a href="/202109/css/hide-input-number-arrows-spinners/" rel="next" title="[CSS] 隱藏數字輸入框 (Input Number) 的上下箭頭 (Arrows) 控制項">
+                  [CSS] 隱藏數字輸入框 (Input Number) 的上下箭頭 (Arrows) 控制項 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>

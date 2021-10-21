@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"monshin.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.7.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":12,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"monshin.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":12,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜尋...","empty":"我們無法找到任何有關 ${query} 的搜索結果","hits_time":"${hits} 找到 ${time} 個結果","hits":"找到 ${hits} 個結果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 <meta name="description" content="在 Mobile Safari 上使用捲軸（Scroll）時，可能會覺得在操作上卡卡的，這時可以藉由 CSS 上的 -webkit-overflow-scrolling 屬性，來控制 Mobile Safari 上的捲動效果。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[CSS] 解決 iOS Safari 使用捲軸（Scroll）覺得卡卡的問題 — -webkit-overflow-scrolling">
@@ -29,7 +29,7 @@
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://monshin.github.io/202108/css/-webkit-overflow-scrolling/banner.jpg">
 <meta property="article:published_time" content="2021-08-24T02:37:58.000Z">
-<meta property="article:modified_time" content="2021-09-07T16:35:01.251Z">
+<meta property="article:modified_time" content="2021-10-13T14:09:59.448Z">
 <meta property="article:author" content="Monshin Hsiao">
 <meta property="article:tag" content="CSS">
 <meta property="article:tag" content="Safari">
@@ -159,8 +159,7 @@
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-overview">
-            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Monshin Hsiao"
       src="/images/monshin-avatar.jpeg">
   <p class="site-author-name" itemprop="name">Monshin Hsiao</p>
@@ -171,7 +170,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -182,7 +181,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">標籤</span></a>
       </div>
   </nav>
@@ -201,7 +200,6 @@
 
 
 
-          </div>
         </div>
       </div>
     </div>
@@ -265,7 +263,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新於</span>
-        <time title="修改時間：2021-09-08 00:35:01" itemprop="dateModified" datetime="2021-09-08T00:35:01+08:00">2021-09-08</time>
+        <time title="修改時間：2021-10-13 22:09:59" itemprop="dateModified" datetime="2021-10-13T22:09:59+08:00">2021-10-13</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -312,8 +310,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <img src="/202108/css/-webkit-overflow-scrolling/banner.jpg" class="" title="Banner">
-
+        <p><img src="/202108/css/-webkit-overflow-scrolling/banner.jpg" alt="Banner"></p>
 <p>在 Mobile Safari 上使用捲軸（Scroll）時，可能會覺得在操作上卡卡的，這時可以藉由 CSS 上的 <code>-webkit-overflow-scrolling</code> 屬性，來控制 Mobile Safari 上的捲動效果。</p>
 <span id="more"></span>
 
@@ -338,7 +335,9 @@
         encodeURIComponent(location.href.split("?")[0].split("#")[0]) + "'></iframe>");
     </script>
   </div>
-<script type="text/javascript" src="https://product.mchannles.com/oeya_ad.php?key=13444"></script>
+<div style="text-align: center;">
+  <script type="text/javascript" src="https://product.mchannles.com/oeya_ad.php?key=13444"></script>
+</div>
           <div class="post-tags">
               <a href="/tags/CSS/" rel="tag"># CSS</a>
               <a href="/tags/Safari/" rel="tag"># Safari</a>
@@ -417,7 +416,9 @@
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>
+
 
 
 
