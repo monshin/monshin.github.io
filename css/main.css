@@ -522,6 +522,9 @@ figure.highlight .code pre {
   padding-left: 10px;
   width: 100%;
 }
+figure.highlight .marked {
+  background: rgba(0,0,0,0.3);
+}
 pre .caption,
 pre figcaption {
   margin-bottom: 10px;
@@ -2886,4 +2889,7 @@ mark.search-keyword {
     --link-color: #999;
     --link-hover-color: #eee;
   }
+}
+iframe[title='Disqus']:not([src]) {
+  display: none;
 }
