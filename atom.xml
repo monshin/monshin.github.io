@@ -244,7 +244,7 @@
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;/202108/js/file-upload-using-fetch/banner.jpg&quot; alt=&quot;Banner&quot;&gt;&lt;/p&gt;
-&lt;p&gt;上傳檔案是 Web 常用的應用之一，能使用的方式有相當多中，其中最常基本的方式就是將 HTML form 標籤上的編碼類型(enctype)設為 multipart/form-data，讓瀏覽器能針對檔案進行編碼。&lt;/p&gt;</summary>
+&lt;p&gt;上傳檔案是 Web 常用的應用之一，能使用的方式有相當多中，其中最常基本的方式就是將 HTML form 標籤上的編碼類型(enctype)設為 multipart&amp;#x2F;form-data，讓瀏覽器能針對檔案進行編碼。&lt;/p&gt;</summary>
     
     
     
